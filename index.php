@@ -300,7 +300,6 @@
                 <img id="img-detail" src="" width="100%" class="img-responsive">
             </div>
             <div class="modal-footer">
-                <button type="button" data-target="#modal-hitung" data-toggle="modal" class="btn  btn-outline btn-success" data-dismiss="modal">Coba Lagi</button>
                 <button type="button" class="btn  btn-outline btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
