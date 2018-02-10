@@ -111,17 +111,20 @@
         <h4>Fungsi Keanggotaan Masa Kerja Karyawan</h4>
         <hr>
           <img data-toggle="modal" data-target="#modal-image" src="masakerja.png" data-src="masakerja.png" class="img img-responsive img-thumbnails">
+          <img data-toggle="modal" data-target="#modal-image" src="func_masakerja.png" data-src="func_masakerja.png" class="img img-responsive img-thumbnails">
         </div>
         <div class="col-md-4">
         <h4>Fungsi Keanggotaan Gaji Karyawan</h4>
         <hr>
           <img data-toggle="modal" data-target="#modal-image" src="gaji.png"  data-src="gaji.png" class="img img-responsive img-thumbnails">
+          <img data-toggle="modal" data-target="#modal-image" src="func_gaji.png"  data-src="func_gaji.png" class="img img-responsive img-thumbnails">
         </div>
 
         <div class="col-md-4">
         <h4>Fungsi Keanggotaan Bonus Karyawan</h4>
         <hr>
           <img  data-toggle="modal" data-target="#modal-image" src="bonus.png"  data-src="bonus.png"  class="img img-responsive img-thumbnails">
+          <img  data-toggle="modal" data-target="#modal-image" src="func_bonus.png"  data-src="func_bonus.png"  class="img img-responsive img-thumbnails">
         </div>
       </div>
       <hr>
