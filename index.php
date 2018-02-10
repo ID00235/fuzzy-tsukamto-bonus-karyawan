@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>Logika Fuzzy Bonus Karyawan</title>
+    <title>Logika Fuzzy Tsukamoto Bonus Karyawan</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
         padding-top: 50px;
       }
       .starter-template {
-        padding: 40px 15px;
+        padding: 20px 15px;
         text-align: center;
       }
       .alert{
@@ -32,6 +32,17 @@
       .pt10{
         padding-top: 10px !important;
       }
+
+      .navbar-inverse {
+          background-color: #950927 ;
+          border-color:  #6d0f23 ;
+          color: #fff !important;
+      }
+
+      .navbar-inverse .navbar-brand {
+          color: #fff;
+      }
+
       .nol{
         background-color:  #eee ;
         color: #999;
@@ -76,27 +87,20 @@
   <body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Logika Fuzzy - Bonus Karyawan</a>
-        </div>
+      <div class="container" style="padding-top: 5px;">
+        <center><h4>Penerapan Logika Fuzzy Tsukamoto dalam menentukan Bonus Karyawan</h4></center>
       </div>
     </nav>
 
     <div class="container">
 
       <div class="starter-template">
-        <h3>Penerapan Logika Fuzzy dalam menentukan Bonus Karyawan</h3>
-        (Tugas Matakuliah Sistem Penunjang Keputusan dan Sistem Pakar) <br>
+        <h4>TUGAS MATAKULIAH</h4>
+        <h4>" Sistem Penunjang Keputusan dan Sistem Pakar "</h4><br>
+        Oleh: <br>
         <b>Irwan Kurniawan</b><br>
         <b>Refki Satrianto</b><br>
-        <b>Linda..</b><br>
+        <b>Linda Wati</b><br>
         <hr>
         <center>
           <button data-toggle="modal" data-target="#modal-hitung" class="btn btn-primary"> Demo Program</button>
@@ -106,18 +110,18 @@
         <div class="col-md-4">
         <h4>Fungsi Keanggotaan Masa Kerja Karyawan</h4>
         <hr>
-          <img src="masakerja.png" class="img img-responsive img-thumbnails">
+          <img data-toggle="modal" data-target="#modal-image" src="masakerja.png" data-src="masakerja.png" class="img img-responsive img-thumbnails">
         </div>
         <div class="col-md-4">
         <h4>Fungsi Keanggotaan Gaji Karyawan</h4>
         <hr>
-          <img src="gaji.png" class="img img-responsive img-thumbnails">
+          <img data-toggle="modal" data-target="#modal-image" src="gaji.png"  data-src="gaji.png" class="img img-responsive img-thumbnails">
         </div>
 
         <div class="col-md-4">
         <h4>Fungsi Keanggotaan Bonus Karyawan</h4>
         <hr>
-          <img src="bonus.png" class="img img-responsive img-thumbnails">
+          <img  data-toggle="modal" data-target="#modal-image" src="bonus.png"  data-src="bonus.png"  class="img img-responsive img-thumbnails">
         </div>
       </div>
       <hr>
@@ -261,6 +265,7 @@
 </div>
 
 
+
 <div class="modal fade" id="modal-hasil" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -278,6 +283,29 @@
         </div>
     </div>
 </div>
+
+
+
+<div class="modal fade" id="modal-image" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <img id="img-detail" src="" width="100%" class="img-responsive">
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-target="#modal-hitung" data-toggle="modal" class="btn  btn-outline btn-success" data-dismiss="modal">Coba Lagi</button>
+                <button type="button" class="btn  btn-outline btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <!-- Modal -->
 
     <!-- Bootstrap core JavaScript
@@ -302,6 +330,11 @@
             $("#modal-hitung").on("shown.bs.modal", function(){
                 $("#masakerja").val('');
                 $("#gaji").val('');
+            })
+
+            $("#modal-image").on("shown.bs.modal", function(e){
+                $btn = e.relatedTarget;
+                $("#img-detail").attr('src' , $($btn).data('src'));
             })
 
 
